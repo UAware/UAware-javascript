@@ -35,6 +35,8 @@ const createBannerElement = () => {
  * Communicates with cloudflare worker to identify requests from target locales
  *
  * Resolves to a boolean indicating whether client is in target locale
+ *
+ * In case of any error we assume the client is in the target locale
  */
 const fetchIsClientInTarget = () =>
   fetch("https://ip.generic-w.workers.dev")
@@ -42,9 +44,9 @@ const fetchIsClientInTarget = () =>
       if (!response.ok) throw new Error("Network error");
       return response.text();
     })
-    .then((responseText) => responseText === "true")
-    // Silently ignore any failures
-    .catch(() => false);
+    .then((responseText) => responseText !== "false")
+    // In case of any error, assume user is in target locale
+    .catch(() => true);
 
 /**
  * Mounts banner to document if and only if client is in target locale
