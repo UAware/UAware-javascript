@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "shx rm -rf dist/",
-    "build": "esbuild src/index.ts --bundle --minify --outfile=dist/index.js",
-    "postbuild": "shx cp package.json README.md ./dist"
+    "build": "esbuild src/index.ts --bundle --minify --outfile=dist/uaware.js"
   },
   "repository": {
     "type": "git",

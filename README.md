@@ -21,9 +21,11 @@ We are also releasing the `UAware-worker` for those that want to run their own w
 
 ## How?
 
-Add the following script tag to your HTML. It can go either in the `head` tag or at the end of the `html` tag. Either way will work fine.
+Download the [latest script file](https://github.com/UAware/UAware-javascript/releases/download/v1.0.0/uaware.js). We would recommend that you rename it to a random filename but that is not required. When using the standard file, this is what you would add to your webpage (replace js/ with the correct location of your javascript assets):
 
-`<script type="text/javascript" src="https://cdn.skypack.dev/uaware-javascript" defer></script>`
+```html
+<script type="text/javascript" src="js/uaware.js"></script>
+```
 
 ## Who?
 

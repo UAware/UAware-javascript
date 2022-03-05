@@ -31,14 +31,12 @@ npm run build
 
 ### Build Process
 
-The build process uses [esbuild](https://esbuild.github.io/) to compile, bundle and minify TypeScript source code starting from `src/index.ts` as the entry point. The output is put in the `dist` directory. Additionally the `project.json` and `README.md` files are copied to `dist`. This gives the `dist` directory everything it needs to be published directly to `npm`.
+The build process uses [esbuild](https://esbuild.github.io/) to compile, bundle and minify TypeScript source code starting from `src/index.ts` as the entry point. The output is put in the `dist` directory.
 
-### Publishing
+### Release Process
 
-You'll need permission to publish to the UAware npm account. If you think you should have access, get in touch with the maintainers.
+Releases are maintained within Github. You can use their UI to create a new release. While doing so make sure you do all the following:
 
-```shell
-npm run build
-npm login
-npm publish ./dist
-```
+- Mark it with a new tag version
+- Manually add the compiled script as a binary [see step 8 in these docs](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+- Update the `README.md` link to the newly released script
