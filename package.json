@@ -1,0 +1,23 @@
+{
+  "name": "uaware-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "shx rm -rf dist/",
+    "build": "esbuild src/index.ts --bundle --minify --outfile=dist/uaware.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UAware/UAware-javascript.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UAware/UAware-javascript/issues"
+  },
+  "homepage": "https://github.com/UAware/UAware-javascript#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.25",
+    "shx": "^0.3.4",
+    "typescript": "^4.6.2"
+  }
+}
